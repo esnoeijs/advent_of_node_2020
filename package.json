@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "day1": "node src/index.js 1 input/day1",
+    "day2": "node src/index.js 2 input/day2",
     "test": "jest"
   },
   "keywords": [],
