@@ -6,6 +6,7 @@
   "scripts": {
     "day1": "node src/index.js 1 input/day1",
     "day2": "node src/index.js 2 input/day2",
+    "day3": "node src/index.js 3 input/day3",
     "test": "jest"
   },
   "keywords": [],
