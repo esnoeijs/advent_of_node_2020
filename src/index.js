@@ -3,6 +3,7 @@ const args = process.argv.slice(2);
 const day1 = require(`./day1.js`);
 const day2 = require(`./day2.js`);
 const day3 = require(`./day3.js`);
+const day4 = require(`./day4.js`);
 
 dayNumber = args[0];
 inputFile = args[1];
@@ -24,5 +25,9 @@ switch (dayNumber) {
   case '3':
     console.log(`part1: ${day3.solvePart1(input)}`);
     console.log(`part2: ${day3.solvePart2(input)}`);
+    break;
+  case '4':
+    console.log(`part1: ${day4.solvePart1(input)}`);
+    console.log(`part2: ${day4.solvePart2(input)}`);
     break;
 }
