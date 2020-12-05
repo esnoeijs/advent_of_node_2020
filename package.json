@@ -8,6 +8,7 @@
     "day2": "node src/index.js 2 input/day2",
     "day3": "node src/index.js 3 input/day3",
     "day4": "node src/index.js 4 input/day4",
+    "day5": "node src/index.js 5 input/day5",
     "test": "jest"
   },
   "keywords": [],
