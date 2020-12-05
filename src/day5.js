@@ -1,15 +1,12 @@
 function solveBSP(sequence) {
-  let range = [0, (Math.pow(2, sequence.length)) - 1];
-  for (let side of sequence) {
-    let selection = Math.ceil((range[1] - range[0]) / 2);
-    if (side === 1) {
-      range[1] -= selection;
-    } else {
-      range[0] += selection;
+  let val = 0;
+  for (let idx = 1; idx <= sequence.length; idx++) {
+    if (sequence[idx-1] === 1) {
+      val += Math.pow(2, (sequence.length - idx));
     }
   }
 
-  return range[0];
+  return val;
 }
 
 function calculateSeatID(boardingPassCode) {
@@ -17,8 +14,8 @@ function calculateSeatID(boardingPassCode) {
     return 0;
   }
 
-  const row = solveBSP(boardingPassCode.slice(0, 7).split('').map(x => x === 'F' ? 1 : 0));
-  const col = solveBSP(boardingPassCode.slice(7).split('').map(x => x === 'L' ? 1 : 0));
+  const row = solveBSP(boardingPassCode.slice(0, 7).split('').map(x => x === 'B' ? 1 : 0));
+  const col = solveBSP(boardingPassCode.slice(7).split('').map(x => x === 'R' ? 1 : 0));
 
   return (row * 8) + col;
 }
