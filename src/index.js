@@ -8,6 +8,7 @@ const day5 = require(`./day5.js`);
 const day6 = require(`./day6.js`);
 const day7 = require(`./day7.js`);
 const day8 = require(`./day8.js`);
+const day9 = require(`./day9.js`);
 
 dayNumber = args[0];
 inputFile = args[1];
@@ -44,10 +45,14 @@ switch (dayNumber) {
     break;
   case '7':
     console.log(`part1: ${day7.solvePart1(input)}`);
-    console.log(`part1: ${day7.solvePart2(input)}`);
+    console.log(`part2: ${day7.solvePart2(input)}`);
     break;
   case '8':
     console.log(`part1: ${day8.solvePart1(input)}`);
-    console.log(`part1: ${day8.solvePart2(input)}`);
+    console.log(`part2: ${day8.solvePart2(input)}`);
+    break;
+  case '9':
+    console.log(`part1: ${day9.solvePart1(input, 25)}`);
+    console.log(`part2: ${day9.solvePart2(input, 25)}`);
     break;
 }
